@@ -1,0 +1,9 @@
+"Patch"
+{
+	include "materials\models\weapons\c_models\c_degreaser\c_degreaser_red.vmt"
+
+	insert
+	{
+	"$basetexture"	"models\weapons\c_models\c_degreaser\c_degreaser_grn"
+	}
+}
