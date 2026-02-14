@@ -1,18 +1,19 @@
-#base "items_game_tf2c.txt"
+#base "items_game.txt"
 
 "items_game"
-{
-	"items"
-	{		
-		"20002" // Yeah I still this weapon... sorry Shale ========================================================
+{	
+	"prefabs"
+	{
+		"Heavy Black Box"
 		{
-			"name"	"Heavy Black Box"
-			"prefab"	"valve"
-			"first_sale_date"	"2010/09/29"
+			"enabled"	"1"
 			"item_class"	"tf_weapon_minigun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
 			"capabilities"
 			{
 				"nameable"		"1"
+				"can_craft_count"	"1"
 			}
 			"tags"
 			{
@@ -23,17 +24,16 @@
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Minigun"
-			"item_name"	"#TF_Weapon_HeavyBlackBox"
-			"item_description"	"#TF_Weapon_HeavyBlackBox_Desc"
+			"item_name"	"Natasha"
 			"item_slot"	"primary"
-			"item_logname"	"ludmila"
-			"item_iconname"	"natascha"
+			"item_logname"	"Natasha"
+			"item_iconname"	"Natasha"
 			"image_inventory"	"backpack/weapons/c_models/c_w_ludmila/c_w_ludmila"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_minigun/c_minigun_natascha.mdl"
-			"inspect_panel_dist" "88"
 			"attach_to_hands"	"1"
+			"inspect_panel_dist" "88"
 			"item_quality"	"normal"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
@@ -45,7 +45,19 @@
 			{
 				"min_viewmodel_offset"		"10 0 -9"
 			}
-			"attributes" // all i did was remove the slow and give a regen ammo and health
+			"visuals"
+			{
+				"sound_reload"				"Weapon_Minifun.Reload"
+				"sound_empty"				"Weapon_Minifun.ClipEmpty"
+				"sound_double_shot"			"Weapon_Minifun.Fire"
+				"sound_special1"			"Weapon_Minifun.WindUp"
+				"sound_special2"			"Weapon_Minifun.WindDown"
+				"sound_special3"			"Weapon_Minifun.Spin"
+				"sound_burst"				"Weapon_Minifun.FireCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes" 
 			{
 				"heal on hit for rapidfire"
 				{
@@ -64,51 +76,52 @@
 				}
 
 			}
-			"visuals"
-			{
-				"attached_models_festive"
-				{
-					"0"
-					{
-						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
-					}
-				}
-				"sound_reload"	"Weapon_Minifun.Reload"
-				"sound_empty"	"Weapon_Minifun.ClipEmpty"
-				"sound_double_shot"	"Weapon_Minifun.Fire"
-				"sound_special1"	"Weapon_Minifun.WindUp"
-				"sound_special2"	"Weapon_Minifun.WindDown"
-				"sound_special3"	"Weapon_Minifun.Spin"
-				"sound_burst"	"Weapon_Minifun.FireCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-		"20003" //Pepesha ====================================================== 
+	
+		"Pepesha"
 		{
-		    "name"						"TF_WEAPON_PPSH_HEAVY"
-			"item_class"				"tf_weapon_smg"
-			"item_slot"                 "secondary"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"			"1"
+			"item_type_name"			"#tf_weapon_smg"
+			"item_name"					"Pepesha"
+			"item_slot"					"primary"
 			"anim_slot"					"secondary"
-			"propername"				"0"
-			"item_name"					"#TF_Weapon_PPSH_HEAVY"
-			"item_type_name"			"#TF_Weapon_SMG"
-			"item_description"			"#TF_Weapon_PPSH_HEAVY_Desc"
 			"item_logname"				"Pepesha"
 			"item_iconname"				"Prypiat Papasha"
 			"image_inventory"			"backpack/weapons/c_models/c_papasha_heavy/c_papasha_heavy"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
 			"model_world"				"models/weapons/w_models/w_ppsh_heavy.mdl"
 			"model_player"				"models/weapons/v_models/v_ppsh_heavy.mdl"
-			"attach_to_hands"			"2"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "88"
+			"item_quality"	"normal"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
 			"used_by_classes"
-				{
-					"heavy"				"1"
-				}
-			"static_attrs"																		
-				{
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
 					"min_viewmodel_offset"					"0 0 -8"
-					"class select override vcd"				"taunt02"				
-				}
+					"class select override vcd"				"taunt02"	
+			}
 			"attributes"
 				{
 				"hidden secondary max ammo penalty"
@@ -126,9 +139,10 @@
 						"attribute_class"	"mult_crit_chance"
 						"value"				"0"
 					}
+				}
 			}
 		}
-		"20004" //Stolen shield from snowy 
+		"The Tide Turner" //Stolen shield from snowy 
 		{
 			"name"						"TF_WEAPON_Turner"
 			"item_class"				"tf_wearable_demoshield"
@@ -181,7 +195,7 @@
 				}						
 			}		
 		}
-		"20005" //stolen sword yes it's still from snowy
+		"Eyelander" //stolen sword yes it's still from snowy
 		{
 			"name"						"TF_WEAPON_Eyelander"
 			"item_class"				"tf_weapon_sword"
@@ -255,7 +269,7 @@
 					}
 				}	
 		}
-		"20016" //Another Shield 
+		"Targe" //Another Shield 
 		{
 				"name"						"TF_WEAPON_Targe"
 				"item_class"				"tf_wearable_demoshield"
@@ -290,7 +304,7 @@
 					}						
 				}				
 		}	
-		"20017" //Yes again 
+		"Splendid" //Yes again 
 		{
 				"name"						"TF_WEAPON_Splendid_Screen"
 				"item_class"				"tf_wearable_demoshield"
@@ -335,7 +349,7 @@
 					}						
 				}				
 		}			
-		"20018" //We even steal the legs! 
+		"Bootlegger" //We even steal the legs! 
 		{
 				"name"						"TF_WEAPON_Bootlegger"
 				"item_class"				"tf_wearable"
@@ -387,7 +401,7 @@
 					}
 				}			
 		}
-		"20020" //BANANANA | ayileem
+		"BANANA"
 		{
 			"name"						"ba_w_banana"
 			"item_class"				"tf_weapon_lunchbox"
@@ -401,60 +415,60 @@
 			"model_player"				"models/weapons/v_models/v_banana_heavy.mdl"
 			"attach_to_hands"			"2"
 			"used_by_classes"
-			{
-				"heavy"					"1"
-			}
+				{
+					"heavy"					"1"
+				}
 			"static_attrs"
-			{
-				"item_meter_charge_type"				"1"
-				"item_meter_charge_rate"				"30"
-				"min_viewmodel_offset"					"10 0 -11"
-				"meter_label"							"#TF_Meter_LunchBox"
-				"custom lunchbox throwable model"		"models/items/banana/plate_banana.mdl"
-			}
+				{
+					"item_meter_charge_type"				"1"
+					"item_meter_charge_rate"				"30"
+					"min_viewmodel_offset"					"10 0 -11"
+					"meter_label"							"#TF_Meter_LunchBox"
+					"custom lunchbox throwable model"		"models/items/banana/plate_banana.mdl"
+				}
 			"attributes"
-			{
-				"effect bar recharge rate increased"
 				{
-					"attribute_class"	"effectbar_recharge_rate"
-					"value"				"0.50"
-				}
-				"custom lunchbox throwable type"
-				{
-					"attribute_class"	"custom_lunchbox_throwable_type"
-					"value"				"1"
-				}
-				"sandvich explain"		"1"
-				// sandwich stats
-				"special taunt"
-				{
-					"attribute_class"	"special_taunt"
-					"value"				"1"
-				}
-				"mod lunchbox critboostable"
-				{
-					"attribute_class"	"mod_lunchbox_critboostable"
-					"value"				"1"
-				}
-				"allowed in medieval mode"
-				{
-					"attribute_class"	"allowed_in_medieval_mode"
-					"value"				"1"
-				}
-			}	
+					"effect bar recharge rate increased"
+					{
+						"attribute_class"	"effectbar_recharge_rate"
+						"value"				"0.50"
+					}
+					"custom lunchbox throwable type"
+					{
+						"attribute_class"	"custom_lunchbox_throwable_type"
+						"value"				"1"
+					}
+					"sandvich explain"		"1"
+					// sandwich stats
+					"special taunt"
+					{
+						"attribute_class"	"special_taunt"
+						"value"				"1"
+					}
+					"mod lunchbox critboostable"
+					{
+						"attribute_class"	"mod_lunchbox_critboostable"
+						"value"				"1"
+					}
+					"allowed in medieval mode"
+					{
+						"attribute_class"	"allowed_in_medieval_mode"
+						"value"				"1"
+					}
+				}	
 			"visuals"
-			{
-				"animation_replacement"
 				{
-					"ACT_SECONDARY_VM_INSPECT_START"	"ACT_ITEM1_VM_INSPECT_START"
-					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_ITEM1_VM_INSPECT_IDLE"
-					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_ITEM1_VM_INSPECT_END"
+					"animation_replacement"
+					{
+						"ACT_SECONDARY_VM_INSPECT_START"	"ACT_ITEM1_VM_INSPECT_START"
+						"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_ITEM1_VM_INSPECT_IDLE"
+						"ACT_SECONDARY_VM_INSPECT_END"		"ACT_ITEM1_VM_INSPECT_END"
+					}
 				}
-			}
 			"mouse_pressed_sound"		"#ui/item_sandwich_drop.wav"
 			"drop_sound"				"#ui/item_sandwich_pickup.wav"
 		}
-		"20021" //FLAMES!!! | ayileem
+		"Degraser"
 		{
 			"name"						"ba_w_degreaser"
 			"item_class"				"tf_weapon_flamethrower"
@@ -469,23 +483,23 @@
 			"model_player"				"models/weapons/v_models/v_degreaser_pyro.mdl"
 			"attach_to_hands"			"2"
 			"used_by_classes"
-			{
-				"pyro"					"1"
-			}
+				{
+					"pyro"					"1"
+				}
 			"static_attrs"
-			{
-				"min_viewmodel_offset"	"10 0 -10"
+				{
+					"min_viewmodel_offset"	"10 0 -10"
 
-				"flame_gravity"					"0"
-				"flame_drag"					"8.500000"
-				"flame_up_speed"				"50"
-				"flame_speed"					"2450"
-				"flame_spread_degree"			"2.800000"
-				"flame_lifetime"				"0.600000"
-				"flame_random_life_time_offset"	"0.100000"
-				"flame_velocity_fade_start"		"0.300000"
-				"flame_velocity_fade_end"		"0.500000"
-			}
+					"flame_gravity"					"0"
+					"flame_drag"					"8.500000"
+					"flame_up_speed"				"50"
+					"flame_speed"					"2450"
+					"flame_spread_degree"			"2.800000"
+					"flame_lifetime"				"0.600000"
+					"flame_random_life_time_offset"	"0.100000"
+					"flame_velocity_fade_start"		"0.300000"
+					"flame_velocity_fade_end"		"0.500000"
+				}
 			"attributes"
 			{
 				"deploy time decreased"
@@ -506,7 +520,7 @@
 				"flamethrower explain"	"1"
 			}
 		}
-		"20022" //BEST PYRO MELE! | ayileem
+		"axtinguisher"
 		{
 			"name"						"ba_w_axtinguisher"
 			"item_class"				"tf_weapon_fireaxe"
@@ -559,7 +573,7 @@
 				}
 			}
 		}
-		"20023" // Model by sedisocks | script by ayileem
+		"chemthrower"
 		{
 			"name"						"ba_w_chemthrower"
 			"item_class"				"tf_weapon_flamethrower"
@@ -577,23 +591,23 @@
 			"model_player"				"models/weapons/v_models/v_chemthrower_pyro.mdl"
 			"attach_to_hands"			"2"
 			"used_by_classes"
-			{
-				"pyro"					"1"
-			}
+				{
+					"pyro"					"1"
+				}
 			"static_attrs"
-			{
-				"min_viewmodel_offset"	"10 0 -10"
-			
-				"flame_gravity"					"0"
-				"flame_drag"					"8.500000"
-				"flame_up_speed"				"50"
-				"flame_speed"					"2450"
-				"flame_spread_degree"			"2.800000"
-				"flame_lifetime"				"0.600000"
-				"flame_random_life_time_offset"	"0.100000"
-				"flame_velocity_fade_start"		"0.300000"
-				"flame_velocity_fade_end"		"0.500000"
-			}
+				{
+					"min_viewmodel_offset"	"10 0 -10"
+				
+					"flame_gravity"					"0"
+					"flame_drag"					"8.500000"
+					"flame_up_speed"				"50"
+					"flame_speed"					"2450"
+					"flame_spread_degree"			"2.800000"
+					"flame_lifetime"				"0.600000"
+					"flame_random_life_time_offset"	"0.100000"
+					"flame_velocity_fade_start"		"0.300000"
+					"flame_velocity_fade_end"		"0.500000"
+				}
 			"attributes"
 			{
 				"provide on active"		"1"
@@ -620,7 +634,7 @@
 				}
 			}
 		}
-		"20024"
+		"directhit"
 		{
 			"name"						"ba_w_directhit"
 			"item_class"				"tf_weapon_rocketlauncher"
@@ -636,13 +650,13 @@
 			"model_player"				"models/weapons/v_models/v_directhit_soldier.mdl"
 			"attach_to_hands"			"2"
 			"used_by_classes"
-			{
-				"soldier"				"1"
-			}
+				{
+					"soldier"				"1"
+				}
 			"static_attrs"
-			{
-				"min_viewmodel_offset"	"10 -3 -10"
-			}
+				{
+					"min_viewmodel_offset"	"10 -3 -10"
+				}
 			"attributes"
 			{
 				"damage bonus"
@@ -667,8 +681,7 @@
 				}
 			}
 		}
-//======================================================================================================================
-		"20025" //Scout Spas12
+		"SPAS12"
 		{
 			"name"						"TF_WEAPON_Scout_SPAS12"
 			"prefab"					"weapon_scattergun"
@@ -707,8 +720,7 @@
 				}
 			}
 		}
-//====================================================================================================================		speed_boost_on_hit_enemy
-		"20026" // Unikalny numer ID broni
+		"Chaingun"
 			{
 				"name"            "ChainGun"
 				"item_class"      "tf_weapon_minigun"
@@ -761,8 +773,7 @@
 						}
 					}
 			}
-//====================================================================================================================
-		"20027"
+		"The Cloak and Dagger"
 		{
 			"name" "The Cloak and Dagger"
 			"prefab" "valve"
@@ -823,7 +834,7 @@
 			"mouse_pressed_sound" "ui/item_watch_pickup.wav"
 			"drop_sound" "ui/item_watch_drop.wav"
 		}
-		"20032"
+		"The Cozy Camper"
 		{
 			"name" "The Cozy Camper"
 			"first_sale_date" "2012/03/15"
@@ -879,7 +890,7 @@
 			"mouse_pressed_sound" "ui/item_pack_pickup.wav"
 			"drop_sound" "ui/item_pack_drop.wav"
 		}
-		"20034"
+		"The Razorback"
 		{
 			"name" "The Razorback"
 			"prefab" "valve"
@@ -940,7 +951,7 @@
 			"mouse_pressed_sound" "ui/item_wood_pole_pickup.wav"
 			"drop_sound" "ui/item_wood_pole_drop.wav"
 		}
-		"20036"
+		"The Sydney Sleeper"
 		{
 			"name" "The Sydney Sleeper"
 			"prefab" "weapon_sniperrifle_alt1"
@@ -1024,7 +1035,7 @@
 				}
 			}
 		}
-		"20037"
+		"The Quick-Fix"
 		{
 			"name" "The Quick-Fix"
 			"prefab" "valve"
@@ -1141,7 +1152,7 @@
 			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
 		}
-		"20039"
+		"The Gunslinger"
 		{
 			"name" "The Gunslinger"
 			"prefab" "valve"
@@ -1242,7 +1253,7 @@
 			"mouse_pressed_sound" "ui/item_robot_arm_pickup.wav"
 			"drop_sound" "ui/item_robot_arm_drop.wav"
 		}
-		"20040"
+		"The Widowmaker"
 		{
 			"name" "The Widowmaker"
 			"item_class" "tf_weapon_shotgun_primary"
@@ -1346,7 +1357,7 @@
 			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
 		}
-		"20041"
+		"The Holiday Punch"
 		{
 			"name" "The Holiday Punch"
 			"item_class" "tf_weapon_fists"
@@ -1444,7 +1455,7 @@
 			"mouse_pressed_sound" "ui/item_hat_pickup.wav"
 			"drop_sound" "ui/item_boxing_gloves_drop.wav"
 		}
-		"20043"
+		"The Killing Gloves of Boxing"
 		{
 			"name" "The Killing Gloves of Boxing"
 			"prefab" "valve"
@@ -1525,7 +1536,7 @@
 			"mouse_pressed_sound" "ui/item_boxing_gloves_pickup.wav"
 			"drop_sound" "ui/item_boxing_gloves_drop.wav"
 		}
-		"20052"
+		"The Quickiebomb Launcher"
 		{
 			"name" "The Quickiebomb Launcher"
 			"item_class" "tf_weapon_pipebomblauncher"
@@ -1621,7 +1632,7 @@
 			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
 		}
-		"20053"
+		"Stickybomb Jumper"
 		{
 			"name" "Stickybomb Jumper"
 			"prefab" "valve"
@@ -1713,7 +1724,7 @@
 				}
 			}
 		}
-		"20056"
+		"The Manmelter"
 		{
 			"name" "The Manmelter"
 			"item_class" "tf_weapon_flaregun_revenge"
@@ -1802,7 +1813,7 @@
 				}
 			}
 		}
-		"20058"
+		"Dragon Fury"
 		{
 			"name" "The Dragon\'s Fury"
 			"prefab" "paintkit_base"
@@ -1881,7 +1892,7 @@
 			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
 		}
-		"20060"
+		"Equalizer"
 		{
 			"name" "The Equalizer"
 			"prefab" "valve"
@@ -1960,7 +1971,7 @@
 			"mouse_pressed_sound" "ui/item_metal_weapon_pickup.wav"
 			"drop_sound" "ui/item_metal_weapon_drop.wav"
 		}
-		"20062"
+		"Market Gardener"
 		{
 			"name" "The Market Gardener"
 			"item_class" "tf_weapon_shovel"
@@ -2031,7 +2042,7 @@
 			"mouse_pressed_sound" "ui/item_shovel_pickup.wav"
 			"drop_sound" "ui/item_shovel_drop.wav"
 		}
-		"20063"
+		"Escape Plan"
 		{
 			"name" "The Escape Plan"
 			"prefab" "valve"
@@ -2115,7 +2126,7 @@
 			"mouse_pressed_sound" "ui/item_metal_weapon_pickup.wav"
 			"drop_sound" "ui/item_metal_weapon_drop.wav"
 		}
-		"20065"
+		"Battalion"
 		{
 			"name" "The Battalion\'s Backup"
 			"item_class" "tf_weapon_buff_item"
@@ -2190,7 +2201,7 @@
 				}
 			}
 		}
-		"20066"
+		"Concheror"
 		{
 			"name" "The Concheror"
 			"item_class" "tf_weapon_buff_item"
@@ -2269,7 +2280,7 @@
 			"mouse_pressed_sound" "ui/item_pack_pickup.wav"
 			"drop_sound" "ui/item_pack_drop.wav"
 		}
-		"20068"
+		"Rocket Jumper"
 		{
 			"name" "Rocket Jumper"
 			"prefab" "valve"
@@ -2349,7 +2360,7 @@
 				}
 			}
 		}
-		"20069"
+		"The Liberty Launcher"
 		{
 			"name" "The Liberty Launcher"
 			"item_class" "tf_weapon_rocketlauncher"
@@ -2430,7 +2441,7 @@
 				}
 			}
 		}
-		"20070"
+		"Atomizer"
 		{
 			"name" "The Atomizer"
 			"item_class" "tf_weapon_bat"
@@ -2503,7 +2514,7 @@
 			"mouse_pressed_sound" "ui/item_metal_weapon_pickup.wav"
 			"drop_sound" "ui/item_metal_weapon_drop.wav"
 		}
-		"20071"
+		"Assassin"
 		{
 			"name" "The Wrap Assassin"
 			"item_class" "tf_weapon_bat_giftwrap"
@@ -2610,7 +2621,7 @@
 			"mouse_pressed_sound" "ui/item_cardboard_pickup.wav"
 			"drop_sound" "ui/item_cardboard_drop.wav"
 		}
-		"20072"
+		"Boston Basher"
 		{
 			"name" "The Boston Basher"
 			"item_class" "tf_weapon_bat"
@@ -2677,7 +2688,7 @@
 				}
 			}
 		}
-		"20073"
+		"Sandman"
 		{
 			"name" "The Sandman"
 			"prefab" "valve"
@@ -2759,7 +2770,7 @@
 			"mouse_pressed_sound" "ui/item_wood_pole_pickup.wav"
 			"drop_sound" "ui/item_wood_pole_drop.wav"
 		}
-		"20080"
+		"Jumper"
 		{
 			"name" "The B.A.S.E. Jumper"
 			"first_sale_date" "2014/06/18"
@@ -2818,7 +2829,7 @@
 				"bots_cant_use" "1"
 			}
 		}
-		"20082"
+		"The Pain Train"
 		{
 			"name" "The Pain Train"
 			"item_class" "tf_weapon_shovel"
@@ -2894,10 +2905,7 @@
 			"mouse_pressed_sound" "ui/item_wood_pole_pickup.wav"
 			"drop_sound" "ui/item_wood_pole_drop.wav"
 		}
-//================================================================================================================================================================================================================================
-//	Moje wypociny z gamebanana
-//================================================================================================================================================================================================================================
-		"20083" // 
+		"Raznov"
 		{
 			"name"	"Reznov"
 			"prefab"	"SovietSniper"
@@ -2966,7 +2974,7 @@
 
 			}
 		}
-		"20084" // 
+		"Scream"
 		{
 			"name"	"American Scream"
 			"prefab"	"SoldierAR"
@@ -3026,7 +3034,7 @@
 
 			}
 		}
-		"20085" // 
+		"Sledgehammer" // 
 		{
 			"name"	"Sledgehammer"
 			"prefab"	"HeavyEngiShotgun"
@@ -3085,7 +3093,7 @@
 
 			}
 		}
-		"20086" // 
+		"Obrez"
 		{
 			"name"	"Obrez"
 			"prefab"	"SpyObrez"
@@ -3148,7 +3156,7 @@
 				}
 			}
 		}
-		"20087" // 
+		"Macewindows"
 		{
 			"name"	"Mace"
 			"prefab"	"DemoMace"
@@ -3201,6 +3209,5 @@
 				}
 			}
 		}
-//========================================================================================================================
 	}
 }
